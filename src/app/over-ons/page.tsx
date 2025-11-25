@@ -6,7 +6,17 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen bg-background">
             <Header />
-            <div className="pt-20">
+            {/* Page Header */}
+            <div className="bg-background pt-32 pb-12 border-b border-border/40">
+                <div className="container px-4 mx-auto">
+                    <h1 className="text-4xl md:text-5xl font-sans font-bold mb-4 tracking-tight">Over Ons</h1>
+                    <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+                        Een familiebedrijf met passie voor exclusieve automobielen.
+                    </p>
+                </div>
+            </div>
+
+            <div className="pt-12">
                 <AboutSection />
             </div>
             <Footer />

@@ -10,10 +10,10 @@ export default function InventoryPage() {
             <Header />
 
             {/* Page Header */}
-            <div className="bg-muted/30 pt-32 pb-16">
+            <div className="bg-background pt-32 pb-12 border-b border-border/40">
                 <div className="container px-4 mx-auto">
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Onze Collectie</h1>
-                    <p className="text-muted-foreground text-lg max-w-2xl">
+                    <h1 className="text-4xl md:text-5xl font-sans font-bold mb-4 tracking-tight">Onze Collectie</h1>
+                    <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
                         Bekijk ons actuele aanbod van exclusieve automobielen.
                         Staat uw droomauto er niet tussen? Wij zoeken graag voor u.
                     </p>
