@@ -16,16 +16,24 @@ export default function ServicesPage() {
             {/* Full-Width Hero with Subtle Animation */}
             <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
                 <motion.div
-                    initial={{ scale: 1.1 }}
+                    initial={{ scale: 1.05 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
                     className="absolute inset-0"
+                    style={{
+                        imageRendering: 'crisp-edges',
+                        WebkitFontSmoothing: 'antialiased'
+                    }}
                 >
                     <Image
-                        src="/showroom_interior_1763981283525.png"
-                        alt="Auto Boomgaard Luxe Showroom"
+                        src="/car_detail_luxury_1763981365783.png"
+                        alt="Premium Mercedes-Benz in Auto Boomgaard Showroom"
                         fill
                         className="object-cover object-center"
+                        style={{
+                            filter: 'contrast(1.05) saturate(1.1)',
+                            imageRendering: '-webkit-optimize-contrast'
+                        }}
                         priority
                         quality={100}
                         unoptimized
