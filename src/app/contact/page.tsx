@@ -52,8 +52,8 @@ export default function ContactPage() {
                                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black p-8 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
                             >
                                 <div className="relative z-10">
-                                    <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
-                                        <Phone className="w-7 h-7 text-primary" />
+                                    <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
+                                        <Phone className="w-7 h-7 text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-2">Bel ons</h3>
                                     <p className="text-gray-400 mb-4">Bereikbaar op werkdagen</p>
@@ -91,8 +91,8 @@ export default function ContactPage() {
                                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black p-8 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
                             >
                                 <div className="relative z-10">
-                                    <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
-                                        <Mail className="w-7 h-7 text-primary" />
+                                    <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
+                                        <Mail className="w-7 h-7 text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-white mb-2">Email</h3>
                                     <p className="text-gray-400 mb-4">Stuur ons een bericht</p>
