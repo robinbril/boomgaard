@@ -100,14 +100,9 @@ export function Footer() {
 
                         <div className="space-y-6">
                             <h3 className="text-base font-semibold text-white/95">Openingstijden</h3>
-                            <div className="space-y-3">
-                                {openingHours.map((item) => (
-                                    <div key={item.day} className="flex justify-between text-sm">
-                                        <span className="text-white/60">{item.day}</span>
-                                        <span className="text-white/85 font-medium">{item.hours}</span>
-                                    </div>
-                                ))}
-                            </div>
+                            <p className="text-sm text-white/70">
+                                Dagelijks op afspraak, zondag gesloten
+                            </p>
                         </div>
 
                         <div className="space-y-6">

@@ -60,34 +60,32 @@ export function CTASection() {
                     </div>
 
                     {/* Contact Info - Simplified */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-16 max-w-2xl mx-auto border-t border-white/10">
-                        <motion.a
-                            href="tel:+31297560422"
-                            whileHover={{ scale: 1.02 }}
-                            className="flex items-center justify-center gap-3 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all group"
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <a
+                            href="tel:+31611715810"
+                            className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
                         >
-                            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                                <Phone className="w-5 h-5 text-white" />
+                            <div className="p-4 rounded-xl bg-white/10 group-hover:bg-white/20 transition-colors">
+                                <Phone className="w-6 h-6 text-white" />
                             </div>
-                            <div className="text-left">
-                                <div className="text-xs text-gray-400 uppercase tracking-wider">Bel ons</div>
-                                <div className="font-semibold text-white">+31 (0)297 56 04 22</div>
+                            <div className="flex-1">
+                                <p className="text-white/70 text-sm mb-1">Bel ons direct</p>
+                                <p className="text-white font-semibold text-lg">+31 (0)6 11715810</p>
                             </div>
-                        </motion.a>
+                        </a>
 
-                        <motion.a
+                        <a
                             href="mailto:info@autoboomgaard.nl"
-                            whileHover={{ scale: 1.02 }}
-                            className="flex items-center justify-center gap-3 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all group"
+                            className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
                         >
-                            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                                <Mail className="w-5 h-5 text-white" />
+                            <div className="p-4 rounded-xl bg-white/10 group-hover:bg-white/20 transition-colors">
+                                <Mail className="w-6 h-6 text-white" />
                             </div>
-                            <div className="text-left">
-                                <div className="text-xs text-gray-400 uppercase tracking-wider">Email ons</div>
-                                <div className="font-semibold text-white">info@autoboomgaard.nl</div>
+                            <div className="flex-1">
+                                <p className="text-white/70 text-sm mb-1">Email ons</p>
+                                <p className="text-white font-semibold text-lg">info@autoboomgaard.nl</p>
                             </div>
-                        </motion.a>
+                        </a>
                     </div>
                 </motion.div>
             </div>
