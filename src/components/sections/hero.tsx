@@ -3,21 +3,31 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
+import { MagneticButton } from "@/components/ui/magnetic-button"
 import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
     return (
         <section className="relative h-screen min-h-[800px] w-full overflow-hidden flex items-center justify-center">
-            {/* Background Image/Video Placeholder */}
+            {/* Background Image with Parallax & Zoom */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 z-10" />
-                <div
-                    className="w-full h-full bg-cover bg-center brightness-90"
-                    style={{
-                        backgroundImage: "url('https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/dsc08053-high-6cr156.jpg')",
-                        backgroundPosition: "center 60%"
-                    }}
-                />
+                <motion.div
+                    className="absolute inset-0"
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 10, ease: "easeOut" }}
+                >
+                    <Image
+                        src="https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/mb-c300e-lv-standard.jpg"
+                        alt="Mercedes-Benz Premium"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </motion.div>
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
                 {/* Animated gradient orbs for depth */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none z-5">
@@ -70,22 +80,23 @@ export function HeroSection() {
                     </p>
 
                     {/* CTAs - Apple Style */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                        <Button
-                            asChild
-                            size="lg"
-                            className="w-full sm:w-auto bg-white text-black hover:bg-white/95 rounded-full px-10 py-7 text-lg font-semibold shadow-[0_8px_30px_rgb(255,255,255,0.3)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] hover:scale-[1.02] transition-all duration-300"
-                        >
-                            <Link href="/aanbod">Bekijk voorraad</Link>
-                        </Button>
-                        <Button
-                            asChild
-                            variant="outline"
-                            size="lg"
-                            className="w-full sm:w-auto border-2 border-white/50 text-white hover:bg-white/20 hover:border-white/80 rounded-full px-10 py-7 text-lg font-semibold backdrop-blur-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
-                        >
-                            <Link href="/contact">Plan proefrit</Link>
-                        </Button>
+                    <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center">
+                        <MagneticButton>
+                            <Button asChild size="lg" className="h-14 px-8 text-lg rounded-full bg-white text-black hover:bg-white/90 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] hover:scale-105 border-0">
+                                <Link href="/aanbod" className="flex items-center gap-2">
+                                    Bekijk Collectie
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                            </Button>
+                        </MagneticButton>
+
+                        <MagneticButton>
+                            <Button asChild variant="outline" size="lg" className="h-14 px-8 text-lg rounded-full border-white/20 bg-white/5 backdrop-blur-md text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300 hover:scale-105">
+                                <Link href="/contact">
+                                    Maak Afspraak
+                                </Link>
+                            </Button>
+                        </MagneticButton>
                     </div>
                 </motion.div>
             </div>

@@ -1,46 +1,66 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Car, Search, ShieldCheck, RefreshCw } from "lucide-react"
+import { Car, Handshake, MessageCircle, ShieldCheck } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 
 const SERVICES = [
     {
-        title: "Premium Occasions",
-        description: "Exclusief aanbod van jonge Audi & Mercedes-Benz modellen met lage kilometers en topuitrusting.",
+        title: "Ons Aanbod",
+        description: "Jonge Audi's en Mercedessen met lage kilometers en complete uitrusting.",
         icon: Car,
     },
     {
-        title: "Fair Trade-In",
-        description: "Eerlijke taxatie van uw huidige auto. Wij bieden een correcte inruilprijs gebaseerd op marktwaarde.",
-        icon: RefreshCw,
+        title: "Inruilen",
+        description: "Eerlijke taxatie op basis van marktwaarde. Geen gedoe.",
+        icon: Handshake,
     },
     {
-        title: "Persoonlijk Advies",
-        description: "Als familiebedrijf nemen we de tijd voor persoonlijk contact en advies op maat.",
-        icon: Search,
+        title: "Advies",
+        description: "We nemen de tijd. Geen haast, wel eerlijk advies dat bij je past.",
+        icon: MessageCircle,
     },
     {
-        title: "Garantie & Nazorg",
-        description: "Alle auto's worden professioneel voorbereid. Garantiemogelijkheden en nazorg beschikbaar.",
+        title: "Nazorg",
+        description: "Professionele aflevering, garantie en service na aankoop.",
         icon: ShieldCheck,
     },
 ]
 
 export function ServicesSection() {
     return (
-        <section className="py-24 bg-background">
+        <section className="py-32 bg-background relative overflow-hidden">
+            {/* Subtle accent */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+
             <div className="container px-4 mx-auto">
                 <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <h2 className="text-sm font-medium tracking-[0.3em] text-primary uppercase">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-sm font-medium tracking-[0.3em] text-primary uppercase"
+                    >
                         Onze Diensten
-                    </h2>
-                    <h3 className="text-3xl md:text-5xl font-serif font-bold text-foreground">
-                        Alles onder één dak
-                    </h3>
-                    <p className="text-muted-foreground text-lg">
-                        Van aankoop tot nazorg, wij verzorgen het allemaal voor u.
-                    </p>
+                    </motion.p>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-4xl md:text-5xl font-serif font-bold text-foreground"
+                    >
+                        Alles geregeld
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-muted-foreground text-lg"
+                    >
+                        Van aankoop tot nazorg.
+                    </motion.p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -52,12 +72,12 @@ export function ServicesSection() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                         >
-                            <Card className="h-full border border-border/50 shadow-lg hover:shadow-xl hover:shadow-primary/10 bg-card/80 backdrop-blur-sm hover:bg-card transition-all duration-300 group hover:border-primary/30">
+                            <Card className="h-full border border-border/50 hover:border-primary/30 shadow-sm hover:shadow-lg bg-card transition-all duration-300 group">
                                 <CardHeader>
-                                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 shadow-sm">
-                                        <service.icon className="w-7 h-7" />
+                                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary/20 transition-colors duration-300">
+                                        <service.icon className="w-6 h-6" />
                                     </div>
-                                    <CardTitle className="text-xl font-serif text-foreground group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                                    <CardTitle className="text-xl font-semibold text-foreground">{service.title}</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <CardDescription className="text-base text-muted-foreground leading-relaxed">

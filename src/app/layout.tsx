@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
+import { CustomCursor } from "@/components/ui/custom-cursor";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "VD AKKER | Exclusieve Occasions",
+  title: "Auto Boomgaard",
   description: "Exclusieve occasions: premium service en garantie.",
 };
 
@@ -22,10 +30,13 @@ export default function RootLayout({
     <html lang="nl">
       <body
         className={cn(
-          manrope.variable,
+          inter.variable,
+          playfair.variable,
           "antialiased bg-background text-foreground font-sans"
         )}
       >
+        <SmoothScroll />
+        <CustomCursor />
         {children}
       </body>
     </html>

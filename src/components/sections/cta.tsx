@@ -4,45 +4,31 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone, Mail } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function CTASection() {
     return (
-        <section className="py-24 relative overflow-hidden">
-            {/* Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-primary/10">
-                {/* Subtle pattern overlay */}
-                <div className="absolute inset-0 opacity-30" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c0a060' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
-                }} />
+        <section className="relative overflow-hidden">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0">
+                <Image
+                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop"
+                    alt="Luxury car background"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/85 to-gray-900/90" />
             </div>
 
-            {/* Animated Circles */}
-            <motion.div
-                className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
-                animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.5, 0.3],
-                }}
-                transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                }}
-            />
-            <motion.div
-                className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
-                animate={{
-                    scale: [1.2, 1, 1.2],
-                    opacity: [0.5, 0.3, 0.5],
-                }}
-                transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                }}
-            />
+            {/* Subtle grid pattern */}
+            <div className="absolute inset-0 opacity-5" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
 
-            <div className="container px-4 mx-auto relative z-10">
+            {/* Golden accent line */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+
+            <div className="container px-4 mx-auto relative z-10 py-32">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -50,57 +36,56 @@ export function CTASection() {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl mx-auto text-center space-y-8"
                 >
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight">
-                        Klaar om uw droomauto<br />
-                        <span className="text-primary">te ontdekken?</span>
+                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">
+                        Op zoek naar je volgende auto?
                     </h2>
 
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                        Neem vandaag nog contact met ons op of bezoek onze showroom in Uithoorn.
-                        Wij helpen u graag bij het vinden van de perfecte auto.
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        Kom langs in onze showroom in Uithoorn of neem contact op.
+                        We helpen je graag verder.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                        <Button asChild variant="premium" size="lg" className="min-w-[220px] text-base uppercase tracking-wider group">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                        <Button asChild size="lg" className="bg-white hover:bg-gray-100 text-black font-semibold px-8 h-14 text-lg min-w-[220px] group shadow-lg">
                             <Link href="/aanbod" className="flex items-center gap-2">
-                                Bekijk ons aanbod
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                Bekijk collectie
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
-                        <Button asChild variant="outline" size="lg" className="min-w-[220px] text-base uppercase tracking-wider border-primary/20 hover:bg-primary hover:text-white hover:border-primary">
+                        <Button asChild size="lg" className="bg-white hover:bg-gray-100 text-black font-semibold px-8 h-14 text-lg min-w-[220px] shadow-lg">
                             <Link href="/contact">
                                 Neem contact op
                             </Link>
                         </Button>
                     </div>
 
-                    {/* Contact Info */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12 max-w-2xl mx-auto border-t border-border/30">
+                    {/* Contact Info - Simplified */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-16 max-w-2xl mx-auto border-t border-white/10">
                         <motion.a
-                            href="tel:+31297123456"
+                            href="tel:+31297560422"
                             whileHover={{ scale: 1.02 }}
-                            className="flex items-center justify-center gap-3 p-5 rounded-2xl bg-card/50 backdrop-blur-md border border-border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 group"
+                            className="flex items-center justify-center gap-3 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all group"
                         >
-                            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                <Phone className="w-5 h-5 text-primary" />
+                            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                                <Phone className="w-5 h-5 text-white" />
                             </div>
                             <div className="text-left">
-                                <div className="text-xs text-muted-foreground uppercase tracking-wider">Bel ons</div>
-                                <div className="font-medium text-foreground">+31 (0)297 123 456</div>
+                                <div className="text-xs text-gray-400 uppercase tracking-wider">Bel ons</div>
+                                <div className="font-semibold text-white">+31 (0)297 56 04 22</div>
                             </div>
                         </motion.a>
 
                         <motion.a
                             href="mailto:info@autoboomgaard.nl"
                             whileHover={{ scale: 1.02 }}
-                            className="flex items-center justify-center gap-3 p-5 rounded-2xl bg-card/50 backdrop-blur-md border border-border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 group"
+                            className="flex items-center justify-center gap-3 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all group"
                         >
-                            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                <Mail className="w-5 h-5 text-primary" />
+                            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                                <Mail className="w-5 h-5 text-white" />
                             </div>
                             <div className="text-left">
-                                <div className="text-xs text-muted-foreground uppercase tracking-wider">Email ons</div>
-                                <div className="font-medium text-foreground">info@autoboomgaard.nl</div>
+                                <div className="text-xs text-gray-400 uppercase tracking-wider">Email ons</div>
+                                <div className="font-semibold text-white">info@autoboomgaard.nl</div>
                             </div>
                         </motion.a>
                     </div>

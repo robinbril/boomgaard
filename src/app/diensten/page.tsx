@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { ServicesSection } from "@/components/sections/services"
+import { ServicesDetailed } from "@/components/sections/services-detailed"
 
 export default function ServicesPage() {
     return (
@@ -17,7 +18,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="pt-12">
-                <ServicesSection />
+                <ServicesDetailed />
             </div>
             <Footer />
         </main>

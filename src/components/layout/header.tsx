@@ -19,25 +19,9 @@ const navigation = [
 
 export function Header() {
     const [isOpen, setIsOpen] = React.useState(false)
-    const [isScrolled, setIsScrolled] = React.useState(false)
-
-    React.useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 0)
-        }
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
 
     return (
-        <header
-            className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                isScrolled
-                    ? "bg-background/95 backdrop-blur-xl border-b border-primary/20 py-4 shadow-lg shadow-primary/5"
-                    : "bg-black/60 backdrop-blur-md py-6"
-            )}
-        >
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md py-6 border-b border-white/10">
             <div className="container mx-auto px-4 flex items-center justify-between">
                 <Logo />
 
@@ -47,29 +31,24 @@ export function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className={cn(
-                                "text-sm font-medium transition-colors uppercase tracking-wide hover:text-primary",
-                                isScrolled ? "text-white/90 hover:text-primary" : "text-white hover:text-primary"
-                            )}
+                            className="text-sm font-medium text-white hover:text-primary transition-colors uppercase tracking-wide"
                         >
                             {item.name}
                         </Link>
                     ))}
                     <Button
-                        variant="premium"
+                        asChild
+                        variant="default"
                         size="sm"
-                        className="shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-300 font-semibold px-6"
+                        className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-6"
                     >
-                        Maak afspraak
+                        <Link href="/contact">Maak afspraak</Link>
                     </Button>
                 </nav>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className={cn(
-                        "md:hidden",
-                        isScrolled ? "text-foreground" : "text-white"
-                    )}
+                    className="md:hidden text-white"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X /> : <Menu />}

@@ -19,9 +19,9 @@ export const CARS: Car[] = [
         id: "1",
         title: "Mercedes-Benz A250e AMG Designo Grau",
         price: 31950,
-        image: "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/dsc08053-high-6cr156.jpg",
+        image: "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/dsc08053-high-6cr156.jpg?enable-io=true&enable=upscale&crop=1.4284%3A1&width=800",
         images: [
-            "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/dsc08053-high-6cr156.jpg"
+            "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/dsc08053-high-6cr156.jpg?enable-io=true&enable=upscale&crop=1.4284%3A1&width=800"
         ],
         year: 2021,
         mileage: 85950,
@@ -36,9 +36,9 @@ export const CARS: Car[] = [
         id: "2",
         title: "Audi A3 40 TFSI-e S-Line",
         price: 32495,
-        image: "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/3c1dc26a-d164-480e-b9db-d8cadd6e70c9_50774af9-cad9-4048-9048-5dfb1cc2c781-high-h8gz0a.jpg",
+        image: "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/3c1dc26a-d164-480e-b9db-d8cadd6e70c9_50774af9-cad9-4048-9048-5dfb1cc2c781-high-h8gz0a.jpg?enable-io=true&enable=upscale&crop=1.3409%3A1&width=800",
         images: [
-            "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/3c1dc26a-d164-480e-b9db-d8cadd6e70c9_50774af9-cad9-4048-9048-5dfb1cc2c781-high-h8gz0a.jpg"
+            "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/3c1dc26a-d164-480e-b9db-d8cadd6e70c9_50774af9-cad9-4048-9048-5dfb1cc2c781-high-h8gz0a.jpg?enable-io=true&enable=upscale&crop=1.3409%3A1&width=800"
         ],
         year: 2021,
         mileage: 64200,
@@ -53,9 +53,9 @@ export const CARS: Car[] = [
         id: "3",
         title: "Audi A3 45 TFSI-e S-Line",
         price: 28495,
-        image: "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/dsc07736-high-gkem1h.jpg",
+        image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=2669&auto=format&fit=crop",
         images: [
-            "https://primary.jwwb.nl/public/i/m/q/temp-xhbhavtjycnhbxjzwcok/dsc07736-high-gkem1h.jpg"
+            "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=2669&auto=format&fit=crop"
         ],
         year: 2021,
         mileage: 73700,
