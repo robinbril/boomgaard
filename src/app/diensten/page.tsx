@@ -16,11 +16,12 @@ export default function ServicesPage() {
             {/* Full-Width Hero */}
             <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
                 <Image
-                    src="/showroom_interior_1763981283525.png"
-                    alt="Auto Boomgaard Showroom"
+                    src="/hero-showroom.png"
+                    alt="Auto Boomgaard Luxe Showroom"
                     fill
                     className="object-cover"
                     priority
+                    quality={100}
                 />
                 {/* Dark overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
