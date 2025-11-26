@@ -13,8 +13,8 @@ export default function ServicesPage() {
         <main className="min-h-screen bg-background">
             <Header />
 
-            {/* Full-Width Hero with Subtle Animation */}
-            <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+            {/* Full-Width Hero with Subtle Animation - Mobile Optimized */}
+            <section className="relative h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
                 <motion.div
                     initial={{ scale: 1.05 }}
                     animate={{ scale: 1 }}
@@ -44,13 +44,13 @@ export default function ServicesPage() {
                 {/* Dark overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
 
-                {/* Hero Content */}
+                {/* Hero Content - Mobile Responsive */}
                 <div className="relative z-10 container px-4 mx-auto text-center text-white">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-5xl md:text-7xl font-serif font-bold mb-6"
+                        className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 md:mb-6"
                     >
                         Onze Diensten
                     </motion.h1>
@@ -58,7 +58,7 @@ export default function ServicesPage() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto"
+                        className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto px-4"
                     >
                         Van selectie tot aflevering, alles geregeld.
                     </motion.p>

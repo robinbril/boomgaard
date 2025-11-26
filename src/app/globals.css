@@ -100,27 +100,30 @@
     /* Prevents zoom on iOS */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    /* Better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Enhanced Typography */
+  /* Enhanced Typography - Mobile First */
   h1 {
-    @apply text-5xl md:text-7xl font-serif font-bold leading-tight;
+    @apply text-3xl md:text-5xl lg:text-7xl font-serif font-bold leading-tight;
     letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl font-serif font-bold leading-tight;
+    @apply text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight;
     letter-spacing: -0.01em;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-serif font-bold leading-snug;
+    @apply text-xl md:text-2xl lg:text-3xl font-serif font-bold leading-snug;
   }
 
   h4,
   h5,
   h6 {
-    @apply font-serif;
+    @apply font-serif font-semibold;
     line-height: 1.2;
     letter-spacing: -0.02em;
   }
@@ -129,13 +132,75 @@
     line-height: 1.7;
   }
 
-  /* Section spacing */
+  /* Section spacing - Mobile responsive */
   section {
-    @apply py-20 md:py-32;
+    @apply py-12 md:py-20 lg:py-32;
+  }
+
+  /* Touch targets - Minimum 44x44px */
+  button,
+  a[href] {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
-/* Mobile-First Optimizations */
+/* Mobile Performance Optimizations */
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize focus states for mobile */
+@media (hover: none) and (pointer: coarse) {
+
+  a:focus,
+  button:focus {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
+
+/* Grid pattern background */
+.bg-grid-white\/\[0\.02\] {
+  background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Mobile: Disable parallax and heavy effects */
+@media (max-width: 768px) {
+  [data-parallax] {
+    transform: none !important;
+  }
+
+  /* Reduce animation complexity on mobile */
+  .animate-float,
+  .animate-pulse-slow {
+    animation: none;
+  }
+}
+
 @layer utilities {
 
   /* Better button sizing on mobile */
@@ -150,8 +215,6 @@
     }
   }
 
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 }
