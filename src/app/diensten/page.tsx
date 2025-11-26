@@ -98,7 +98,7 @@ export default function ServicesPage() {
                             {/* Image */}
                             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/car_detail_luxury_1763981365783.png"
+                                    src="/premium-car.png"
                                     alt="Premium Occasions"
                                     fill
                                     className="object-cover"
