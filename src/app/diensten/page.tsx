@@ -22,12 +22,13 @@ export default function ServicesPage() {
                     className="absolute inset-0"
                 >
                     <Image
-                        src="/hero-diensten.png"
+                        src="/showroom_interior_1763981283525.png"
                         alt="Auto Boomgaard Luxe Showroom"
                         fill
                         className="object-cover object-center"
                         priority
                         quality={100}
+                        unoptimized
                         sizes="100vw"
                     />
                 </motion.div>
