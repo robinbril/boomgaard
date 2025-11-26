@@ -13,16 +13,25 @@ export default function ServicesPage() {
         <main className="min-h-screen bg-background">
             <Header />
 
-            {/* Full-Width Hero */}
+            {/* Full-Width Hero with Subtle Animation */}
             <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="/hero-showroom.png"
-                    alt="Auto Boomgaard Luxe Showroom"
-                    fill
-                    className="object-cover"
-                    priority
-                    quality={100}
-                />
+                <motion.div
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src="/hero-diensten.png"
+                        alt="Auto Boomgaard Luxe Showroom"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                        quality={100}
+                        sizes="100vw"
+                    />
+                </motion.div>
+
                 {/* Dark overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
 
