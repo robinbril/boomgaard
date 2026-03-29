@@ -214,7 +214,4 @@ html {
       @apply py-16 px-5;
     }
   }
-
-  scroll-behavior: smooth;
-}
 }

@@ -9,7 +9,7 @@ export function Logo({ variant = "light", className }: LogoProps) {
     return (
         <Link href="/" className={`flex items-center ${className}`}>
             <div className="text-2xl md:text-3xl font-bold text-white hover:text-white/80 transition-colors tracking-tight">
-                Auto Boomgaard
+                Boomgaard<span className="text-primary">&</span>Munnik
             </div>
         </Link>
     )

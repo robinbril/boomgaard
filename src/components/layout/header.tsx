@@ -11,9 +11,10 @@ import { Logo } from "@/components/ui/logo"
 
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "Aanbod", href: "/aanbod" },
-    { name: "Diensten", href: "/diensten" },
-    { name: "Over ons", href: "/over-ons" },
+    { name: "Mogelijkheden", href: "/mogelijkheden" },
+    { name: "Rente", href: "/rente" },
+    { name: "Kennisbank", href: "/kennisbank" },
+    { name: "Over Ons", href: "/over-ons" },
     { name: "Contact", href: "/contact" },
 ]
 
@@ -42,7 +43,7 @@ export function Header() {
                         size="sm"
                         className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-6"
                     >
-                        <Link href="/contact">Maak afspraak</Link>
+                        <Link href="/contact">Neem contact op</Link>
                     </Button>
                 </nav>
 
@@ -90,8 +91,8 @@ export function Header() {
                                     </Link>
                                 ))}
                                 <div className="pt-6 border-t border-border">
-                                    <Button variant="premium" className="w-full">
-                                        Maak afspraak
+                                    <Button asChild className="w-full bg-white text-gray-900 hover:bg-gray-100">
+                                        <Link href="/contact">Neem contact op</Link>
                                     </Button>
                                 </div>
                             </nav>
