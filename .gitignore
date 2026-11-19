@@ -40,11 +40,13 @@ next-env.d.ts
 /.gemini
 
 # Process artifacts stay local (specs, loop state, handoffs, plans, caches, scratch)
-.harness/
+**/.harness/*
+!**/.harness/projectstructuur/
 .loops/
 .supergoal/
 .run/
-.e2e/
+**/.e2e/*
+!**/.e2e/cache/
 vite-cache/
 scratchpad/
 .tmp*/
